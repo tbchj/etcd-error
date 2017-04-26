@@ -1,0 +1,56 @@
+[root@ ]# etcdctl member list
+3ae830665dc1d868: name=etcd1 peerURLs=http://27.10.7.251:7001 clientURLs=http://27.10.7.251:4001 isLeader=true
+[root@ ]# 
+[root@ ]# 
+[root@ ]# etcdctl member add etcd2 http://27.10.9.23:7001 
+Added member named etcd2 with ID 39d23979d4ab4774 to cluster
+
+ETCD_NAME="etcd2"
+ETCD_INITIAL_CLUSTER="etcd2=http://27.10.9.23:7001,etcd1=http://27.10.7.251:7001"
+ETCD_INITIAL_CLUSTER_STATE="existing"
+[root@ ]# 
+[root@ ]# 
+[root@ ]# etcdctl member list
+Failed to get leader:  client: etcd cluster is unavailable or misconfigured
+[root@ ]# etcdctl member list
+Failed to get leader:  client: etcd cluster is unavailable or misconfigured
+[root@ ]# systemctl status etcd
+¡ñ etcd.service - Etcd Server
+   Loaded: loaded (/usr/lib/systemd/system/etcd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Wed 2017-04-26 22:57:26 CST; 18min ago
+ Main PID: 20126 (etcd)
+   Memory: 11.6M
+   CGroup: /system.slice/etcd.service
+           ©¸©¤20126 /usr/bin/etcd --name=etcd1 --data-dir=/opt/etcd_conf_tb/etcd/default.etcd --listen-client-urls=http://0.0....
+
+Apr 26 23:15:34  etcd[20126]: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 16
+Apr 26 23:15:34  etcd[20126]: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 16
+Apr 26 23:15:35  etcd[20126]: 3ae830665dc1d868 is starting a new election at term 16
+Apr 26 23:15:35  etcd[20126]: 3ae830665dc1d868 became candidate at term 17
+Apr 26 23:15:35  etcd[20126]: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 17
+Apr 26 23:15:35  etcd[20126]: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 17
+Apr 26 23:15:36  etcd[20126]: 3ae830665dc1d868 is starting a new election at term 17
+Apr 26 23:15:36  etcd[20126]: 3ae830665dc1d868 became candidate at term 18
+Apr 26 23:15:36  etcd[20126]: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 18
+Apr 26 23:15:36  etcd[20126]: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 18
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@ ]# systemctl stop etcd
+[root@ ]# systemctl status etcd
+¡ñ etcd.service - Etcd Server
+   Loaded: loaded (/usr/lib/systemd/system/etcd.service; enabled; vendor preset: disabled)
+   Active: inactive (dead) since Wed 2017-04-26 23:15:48 CST; 1s ago
+  Process: 20126 ExecStart=/bin/bash -c GOMAXPROCS=24 /usr/bin/etcd  --name="${ETCD_NAME}"  --data-dir="${ETCD_DATA_DIR}" --listen-client-urls="${ETCD_LISTEN_CLIENT_URLS}" --listen-peer-urls="${ETCD_LISTEN_PEER_URLS}" --advertise-client-urls="${ETCD_ADVERTISE_CLIENT_URLS}" --initial-advertise-peer-urls="${ETCD_INITIAL_ADVERTISE_PEER_URLS}" --initial-cluster="${ETCD_INITIAL_CLUSTER}" --initial-cluster-state="${ETCD_INITIAL_CLUSTER_STATE}" --initial-cluster-token="${ETCD_INITIAL_CLUSTER_TOKEN}" (code=killed, signal=TERM)
+ Main PID: 20126 (code=killed, signal=TERM)
+
+Apr 26 23:15:48  systemd[1]: Stopping Etcd Server...
+Apr 26 23:15:48  etcd[20126]: received terminated signal, shutting down...
+Apr 26 23:15:48  etcd[20126]: stopping peer 39d23979d4ab4774...
+Apr 26 23:15:48  etcd[20126]: stopped streaming with peer 39d23979d4ab4774 (writer)
+Apr 26 23:15:48  etcd[20126]: stopped streaming with peer 39d23979d4ab4774 (writer)
+Apr 26 23:15:48  etcd[20126]: stopped HTTP pipelining with peer 39d23979d4ab4774
+Apr 26 23:15:48  etcd[20126]: stopped streaming with peer 39d23979d4ab4774 (stream MsgApp v2 reader)
+Apr 26 23:15:48  etcd[20126]: stopped streaming with peer 39d23979d4ab4774 (stream Message reader)
+Apr 26 23:15:48  etcd[20126]: stopped peer 39d23979d4ab4774
+Apr 26 23:15:48  systemd[1]: Stopped Etcd Server.
+[root@ ]# systemctl start etcd
+Job for etcd.service failed because a timeout was exceeded. See "systemctl status etcd.service" and "journalctl -xe" for details.

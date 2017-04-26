@@ -1,0 +1,84 @@
+Apr 26 23:15:56  etcd: etcd Version: 3.0.15
+Apr 26 23:15:56  etcd: Git SHA: fc00305
+Apr 26 23:15:56  etcd: Go Version: go1.6.3
+Apr 26 23:15:56  etcd: Go OS/Arch: linux/amd64
+Apr 26 23:15:56  etcd: setting maximum number of CPUs to 24, total number of available CPUs is 4
+Apr 26 23:15:56  etcd: the server is already initialized as member before, starting as etcd member...
+Apr 26 23:15:56  etcd: listening for peers on http://0.0.0.0:7001
+Apr 26 23:15:56  etcd: listening for client requests on 0.0.0.0:4001
+Apr 26 23:15:56  etcd: name = etcd1
+Apr 26 23:15:56  etcd: data dir = /opt/etcd_conf_tb/etcd/default.etcd
+Apr 26 23:15:56  etcd: member dir = /opt/etcd_conf_tb/etcd/default.etcd/member
+Apr 26 23:15:56  etcd: heartbeat = 100ms
+Apr 26 23:15:56  etcd: election = 1000ms
+Apr 26 23:15:56  etcd: snapshot count = 10000
+Apr 26 23:15:56  etcd: advertise client URLs = http://27.10.7.251:4001
+Apr 26 23:15:56  etcd: restarting member 3ae830665dc1d868 in cluster f13c69928605fa6f at commit index 2136
+Apr 26 23:15:56  etcd: 3ae830665dc1d868 became follower at term 27
+Apr 26 23:15:56  etcd: newRaft 3ae830665dc1d868 [peers: [], term: 27, commit: 2136, applied: 0, lastindex: 2137, lastterm: 2]
+Apr 26 23:15:56  etcd: starting server... [version: 3.0.15, cluster version: to_be_decided]
+Apr 26 23:15:56  etcd: added member 3ae830665dc1d868 [http://27.10.7.251:7001] to cluster f13c69928605fa6f
+Apr 26 23:15:56  etcd: set the initial cluster version to 3.0
+Apr 26 23:15:56  etcd: enabled capabilities for version 3.0
+Apr 26 23:15:56  etcd: added member 39d23979d4ab4774 [http://27.10.9.23:7001] to cluster f13c69928605fa6f
+Apr 26 23:15:56  etcd: starting peer 39d23979d4ab4774...
+Apr 26 23:15:56  etcd: started HTTP pipelining with peer 39d23979d4ab4774
+Apr 26 23:15:56  etcd: started streaming with peer 39d23979d4ab4774 (writer)
+Apr 26 23:15:56  etcd: started streaming with peer 39d23979d4ab4774 (writer)
+Apr 26 23:15:56  etcd: started peer 39d23979d4ab4774
+Apr 26 23:15:56  etcd: added peer 39d23979d4ab4774
+Apr 26 23:15:56  etcd: started streaming with peer 39d23979d4ab4774 (stream Message reader)
+Apr 26 23:15:56  etcd: started streaming with peer 39d23979d4ab4774 (stream MsgApp v2 reader)
+Apr 26 23:15:56  etcd: 3ae830665dc1d868 is starting a new election at term 27
+Apr 26 23:15:56  etcd: 3ae830665dc1d868 became candidate at term 28
+Apr 26 23:15:56  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 28
+Apr 26 23:15:56  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 28
+Apr 26 23:15:57  etcd: 3ae830665dc1d868 is starting a new election at term 28
+Apr 26 23:15:57  etcd: 3ae830665dc1d868 became candidate at term 29
+Apr 26 23:15:57  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 29
+Apr 26 23:15:57  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 29
+Apr 26 23:15:59  etcd: 3ae830665dc1d868 is starting a new election at term 29
+Apr 26 23:15:59  etcd: 3ae830665dc1d868 became candidate at term 30
+Apr 26 23:15:59  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 30
+Apr 26 23:15:59  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 30
+Apr 26 23:16:00  etcd: 3ae830665dc1d868 is starting a new election at term 30
+Apr 26 23:16:00  etcd: 3ae830665dc1d868 became candidate at term 31
+Apr 26 23:16:00  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 31
+Apr 26 23:16:00  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 31
+Apr 26 23:16:02  etcd: 3ae830665dc1d868 is starting a new election at term 31
+Apr 26 23:16:02  etcd: 3ae830665dc1d868 became candidate at term 32
+Apr 26 23:16:02  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 32
+Apr 26 23:16:02  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 32
+Apr 26 23:16:03  etcd: publish error: etcdserver: request timed out
+Apr 26 23:16:03  etcd: 3ae830665dc1d868 is starting a new election at term 32
+Apr 26 23:16:03  etcd: 3ae830665dc1d868 became candidate at term 33
+Apr 26 23:16:03  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 33
+Apr 26 23:16:03  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 33
+Apr 26 23:16:05  etcd: 3ae830665dc1d868 is starting a new election at term 33
+Apr 26 23:16:05  etcd: 3ae830665dc1d868 became candidate at term 34
+Apr 26 23:16:05  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 34
+Apr 26 23:16:05  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 34
+Apr 26 23:16:06  etcd: 3ae830665dc1d868 is starting a new election at term 34
+Apr 26 23:16:06  etcd: 3ae830665dc1d868 became candidate at term 35
+Apr 26 23:16:06  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 35
+Apr 26 23:16:06  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 35
+Apr 26 23:16:08  etcd: 3ae830665dc1d868 is starting a new election at term 35
+Apr 26 23:16:08  etcd: 3ae830665dc1d868 became candidate at term 36
+Apr 26 23:16:08  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 36
+Apr 26 23:16:08  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 36
+Apr 26 23:16:09  etcd: 3ae830665dc1d868 is starting a new election at term 36
+Apr 26 23:16:09  etcd: 3ae830665dc1d868 became candidate at term 37
+Apr 26 23:16:09  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 37
+Apr 26 23:16:09  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 37
+Apr 26 23:16:10  etcd: publish error: etcdserver: request timed out
+Apr 26 23:16:11  etcd: 3ae830665dc1d868 is starting a new election at term 37
+Apr 26 23:16:11  etcd: 3ae830665dc1d868 became candidate at term 38
+Apr 26 23:16:11  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 38
+Apr 26 23:16:11  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 38
+Apr 26 23:16:13  etcd: 3ae830665dc1d868 is starting a new election at term 38
+Apr 26 23:16:13  etcd: 3ae830665dc1d868 became candidate at term 39
+Apr 26 23:16:13  etcd: 3ae830665dc1d868 received vote from 3ae830665dc1d868 at term 39
+Apr 26 23:16:13  etcd: 3ae830665dc1d868 [logterm: 2, index: 2137] sent vote request to 39d23979d4ab4774 at term 39
+^Z
+[2]+  Stopped                 tail -500f /var/log/messages
+[root@ta
