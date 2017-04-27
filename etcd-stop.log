@@ -1,0 +1,41 @@
+Apr 27 13:26:36 docker3 etcd: etcd Version: 3.0.15
+Apr 27 13:26:36 docker3 etcd: Git SHA: fc00305
+Apr 27 13:26:36 docker3 etcd: Go Version: go1.6.3
+Apr 27 13:26:36 docker3 etcd: Go OS/Arch: linux/amd64
+Apr 27 13:26:36 docker3 etcd: setting maximum number of CPUs to 24, total number of available CPUs is 1
+Apr 27 13:26:36 docker3 etcd: the server is already initialized as member before, starting as etcd member...
+Apr 27 13:26:36 docker3 etcd: listening for peers on http://0.0.0.0:7001
+Apr 27 13:26:36 docker3 etcd: listening for client requests on 0.0.0.0:4001
+Apr 27 13:26:36 docker3 etcd: name = etcd2
+Apr 27 13:26:36 docker3 etcd: data dir = /opt/etcd_conf_tb/etcd/default.etcd
+Apr 27 13:26:36 docker3 etcd: member dir = /opt/etcd_conf_tb/etcd/default.etcd/member
+Apr 27 13:26:36 docker3 etcd: heartbeat = 100ms
+Apr 27 13:26:36 docker3 etcd: election = 1000ms
+Apr 27 13:26:36 docker3 etcd: snapshot count = 10000
+Apr 27 13:26:36 docker3 etcd: advertise client URLs = http://27.10.9.23:4001
+Apr 27 13:26:36 docker3 etcd: restarting member 8154da47cc70c725 in cluster f13c69928605fa6f at commit index 0
+Apr 27 13:26:36 docker3 etcd: 8154da47cc70c725 became follower at term 37
+Apr 27 13:26:36 docker3 etcd: newRaft 8154da47cc70c725 [peers: [], term: 37, commit: 0, applied: 0, lastindex: 0, lastterm: 0]
+Apr 27 13:26:36 docker3 etcd: starting server... [version: 3.0.15, cluster version: to_be_decided]
+Apr 27 13:26:43 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:26:50 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:26:57 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:04 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:11 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:18 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:25 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:32 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:39 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:46 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:27:53 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:28:00 docker3 etcd: publish error: etcdserver: request timed out
+Apr 27 13:28:01 docker3 systemd: Created slice user-995.slice.
+Apr 27 13:28:01 docker3 systemd: Starting user-995.slice.
+Apr 27 13:28:01 docker3 systemd: Started Session 535 of user pcp.
+Apr 27 13:28:01 docker3 systemd: Starting Session 535 of user pcp.
+Apr 27 13:28:01 docker3 systemd: Removed slice user-995.slice.
+Apr 27 13:28:01 docker3 systemd: Stopping user-995.slice.
+Apr 27 13:28:06 docker3 systemd: etcd.service start operation timed out. Terminating.
+Apr 27 13:28:06 docker3 systemd: Failed to start Etcd Server.
+Apr 27 13:28:06 docker3 systemd: Unit etcd.service entered failed state.
+Apr 27 13:28:06 docker3 systemd: etcd.service failed.
